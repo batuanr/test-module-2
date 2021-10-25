@@ -57,12 +57,13 @@ public class PhoneNumberMain {
         System.out.println("1 Nhóm công ty");
         System.out.println("2 nhóm gia đình");
         System.out.println("3 nhóm bạn bè");
+        System.out.println("4 nhóm khác");
         String choice = s.nextLine();
         switch (choice){
             case "1": return GroupType.company;
             case "2": return GroupType.family;
             case "3": return GroupType.friend;
-            default: return null;
+            default: return GroupType.other;
         }
     }
     public void delete(){

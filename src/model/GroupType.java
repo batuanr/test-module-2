@@ -1,5 +1,5 @@
 package model;
 
 public enum GroupType {
-    company, friend, family;
+    company, friend, family, other;
 }
