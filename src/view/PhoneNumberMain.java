@@ -19,8 +19,7 @@ public class PhoneNumberMain {
         System.out.println("2 Nhập giới tính");
         String gender = s.nextLine();
         System.out.println("3 Nhập nhóm");
-        String choice = s.nextLine();
-        GroupType group = selectGroup(choice);
+        GroupType group = selectGroup();
         String phoneNumber = checkNumber();
         String email = checkMail();
         System.out.println("5 Nhập địa chỉ");
@@ -54,7 +53,11 @@ public class PhoneNumberMain {
         }while (true);
     }
 
-    public GroupType selectGroup(String choice){
+    public GroupType selectGroup(){
+        System.out.println("1 Nhóm công ty");
+        System.out.println("2 nhóm gia đình");
+        System.out.println("3 nhóm bạn bè");
+        String choice = s.nextLine();
         switch (choice){
             case "1": return GroupType.company;
             case "2": return GroupType.family;
